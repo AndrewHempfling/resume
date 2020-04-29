@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&family=PT+Sans&family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        .hidden-field {
+            display: none;
+        }
+        
+        .job-details {
+            line-height: 1rem !important;
+            height: .75rem !important;
+            border: none !important;
+            padding-top: .25rem !important;
+            padding-bottom: .25rem !important;
+        }
+        /*
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Raleway', sans-serif;
+        font-family: 'PT Sans', sans-serif;
+        font-family: 'Bebas Neue', cursive;
+        */
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body {
+            font-family: 'PT Sans', sans-serif;
+            background: #ECE9E6;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        .jumbotron {
+            color: rgba(255, 255, 255, .8);
+            background: #141E30;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #243B55, #141E30);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #243B55, #141E30);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        .btn-primary {
+            color: #212529;
+            background-color: #7cc;
+            border-color: #5bc2c2
+        }
+        
+        .btn-primary:hover {
+            color: #212529;
+            background-color: #599b9b;
+            border-color: #8ad3d3
+        }
+        
+        .btn-primary:focus,
+        .btn-primary.focus {
+            box-shadow: 0 0 0 .2rem rgba(91, 194, 194, 0.5);
+            background: #667db6;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        
+        .btn-primary.disabled,
+        .btn-primary:disabled {
+            color: #212529;
+            background-color: #7cc;
+            border-color: #5bc2c2
+        }
+        
+        .btn-primary:not(:disabled):not(.disabled):active,
+        .btn-primary:not(:disabled):not(.disabled).active,
+        .show>.btn-primary.dropdown-toggle {
+            color: #212529;
+            background-color: #9cdada;
+            border-color: #2e7c7c
+        }
+        
+        .btn-primary:not(:disabled):not(.disabled):active:focus,
+        .btn-primary:not(:disabled):not(.disabled).active:focus,
+        .show>.btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 .2rem rgba(91, 194, 194, 0.5)
+        }
+        
+        a {
+            color: #2e7c7c;
+        }
+        
+        a:hover {
+            color: #599b9b;
+        }
+    </style>
+    <title>Resume | Andrew Hempfling</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h2 class="h1">Andrew Hempfling</h2>
+            <h1 class="h2">User Experience Designer</h1>
+            <hr>
+            <button class="btn btn-primary" id="contactMe" type="button"><i class="fa fa-envelope mr-2" aria-hidden="true"></i>Send me a message</button>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col" id="cardContent">
+
+            </div>
+        </div>
+        <!--div class="row">
+            <div class="col table-responsive-sm">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Dates</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableContent">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div-->
+
+        <div class="hidden-field">
+            Leave this blank
+            <input type="text" name="contact" id="contact" value="" />
+        </div>
+        <div id="hidden-field" style="position: fixed; top: 110vh;">
+            Please do not change this field
+            <input type="text" name="email" id="email" value="your@email.com" />
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script>
+            $(function() {
+
+                var jobs = [{
+                    "Title": "Senior UX/UI Designer",
+                    "Company": "Rush Enterprises",
+                    "url": "https://www.rushenterprises.com/",
+                    "Dates": {
+                        "From": "September 2018",
+                        "To": "Present"
+                    },
+                    "Duties": ["Worked with 3rd party vendors to re-design Rush Enterprises and Rush Truck Leasing's websites",
+                        "Engineered the company's first store locator using Bing Maps, collaborating with content and data governance teams",
+                        "Worked with Agile teams to design and develop employee and customer-facing interfaces",
+                        "Transitioned email campaigns from image-based to HTML and oversaw email marketing campaigns"
+                    ]
+                }, {
+                    "Title": "User Experience Designer",
+                    "Company": "Fixd Repair",
+                    "url": "https://www.fixdrepair.com/",
+                    "Dates": {
+                        "From": "July 2018",
+                        "To": "August 2018"
+                    },
+                    "Duties": ["Created roadmap for mobile-first design and build of revamped site.", "Researched alternative designs and solutions to existing problems", "Proposed solutions to pain points causing audience dropoff", "Collaborated with marketing, developers and founders"]
+                }, {
+                    "Title": "User Experience Strategist",
+                    "Company": "USAA",
+                    "url": "https://www.usaa.com/",
+                    "Dates": {
+                        "From": "December 2016",
+                        "To": "May 2018"
+                    },
+                    "Duties": ["Created mental models and user flows for improved information architecture based on user research, task analysis, and card sorts.", "Presented deliverables such as prototypes, user flows, and personas during department-wide planning sessions.", "Used Usertesting.com to find pain points in UI, test concepts, and survey ideas. Results were used to ideate on solutions, drive discussions in favor of the member.", "Developed product concepts, behavioral archetypes, and experience maps to help personify member research and data.", "Worked directly with data analysts, research experts, product directors, and business strategists for a more cohesive UX Strategy for banking customers.", "Mentored interns during summer project", "Created information architecture flows, wireframes and other artifacts using Adobe Illustrator, Photoshop, Sketch, Axure, and other prototyping tools to quickly and easily explain design choices to other partners.", "Collaborated with tech leads to find existing functionality for new online banking products", "Expert in PowerPoint, Photoshop, After Effects and designing for various output media, including mobile, desktop, and video screens"]
+                }, {
+                    "Title": "Designer",
+                    "Company": "Bexar Stage",
+                    "url": "http://bexarstage.com/",
+                    "Dates": {
+                        "From": "May 2017",
+                        "To": "Present"
+                    },
+                    "Duties": ["Built and designed website using WordPress", "Designed graphic materials that falls within the client’s budget by coordinating with small marketing teams", "Created layouts that reinforced the style and voice of the brand", "Added adjustments to website using HTML and CSS as needed", "Worked with print and online media", "Brainstormed ideas for marketing to broad and varied audiences"]
+                }, {
+                    "Title": "Data Entry Clerk",
+                    "Company": "LAZ Parking",
+                    "url": "",
+                    "Dates": {
+                        "From": "February 2013",
+                        "To": "July 2016"
+                    },
+                    "Duties": ["Engineered new processes for data management and analysis.", "Programmed subroutines that eliminated human error using VBA", "Created an algorithm that increased street closure permit profits from about $1M per month to roughly $5M per week", "Designed apps for both mobile and desktop use.", "Produced user flows and functional prototypes.", "Resolved issues regarding the interaction and user interface design.", "Developed processes for more efficient workflows and ideas for automation"]
+                }, {
+                    "Title": "Web Designer",
+                    "Company": "Big-Little Comedy",
+                    "url": "",
+                    "Dates": {
+                        "From": "April 2011",
+                        "To": "December 2013"
+                    },
+                    "Duties": ["Improved site navigation and overall useability", "Managed Graphic Design in AfterEffects.", "Tested different architecture schemas in Axure.", "Developed a design strategy and web architecture."]
+                }]
+                var tblContent = [];
+                var cardsList = [];
+
+                for (i = 0; i < jobs.length; i++) {
+                    var title = jobs[i].Title;
+                    var company = (jobs[i].url == '') ? jobs[i].Company : '<a href="' + jobs[i].url + '" target="_blank">' + jobs[i].Company + '<i class="fas fa-external-link-alt ml-2"></i></a>';
+                    var from = jobs[i].Dates.From;
+                    var to = jobs[i].Dates.To;
+                    var duties = jobs[i].Duties;
+                    var dutyList = [];
+
+
+                    for (ii = 0; ii < duties.length; ii++) {
+                        dutyList.push('<li>' + duties[ii] + '</li>');
+                    }
+                    /*
+                    var tr1 = '<tr><td rowspan="2">' + from + ' – ' + to + '</td><td rowspan="2">' + title + '</td><td>' + company + '</td></tr>';
+                    var tr2 = '<tr><td class="w-50"><ul>' + dutyList.join('') + '</ul></td></tr>';
+                    */
+                    var tr1 = '<tr><td style="line-height: 1rem; height: .75rem; padding-bottom: .25rem;"><h5 class="m-0 p-0">' + title + '</h5></td><td rowspan="4" class="w-50"><ul>' + dutyList.join('') + '</ul></td></tr>';
+                    var tr2 = '<tr><td class="job-details"><h6 class="m-0 p-0">' + company + '</h6></td></tr>';
+                    var tr3 = '<tr><td class="job-details">' + from + ' – ' + to + '</td></tr>';
+                    var tr4 = '<tr><td style="border: none"></td></tr>';
+
+                    var card = '<div class="card my-3"> <div class="card-body"> <h5 class="card-title my-1">' + title + '</h5> <h6 class="card-title my-1">' + company + '</h6> <p class="card-text">' + from + ' – ' + to + '</p><hr><ul>' + dutyList.join('') + '</ul></div></div>';
+
+                    cardsList.push(card);
+                    tblContent.push(tr1, tr2, tr3, tr4);
+                }
+
+                //$('#tableContent').html(tblContent);
+
+                $('#cardContent').html(cardsList.join(''));
+
+                $('#hidden-field').addClass('hidden-field')
+
+                $('#contactMe').on('click', function(event) {
+                    event.preventDefault();
+
+                    var e = [109, 97, 105, 108, 116, 111, 58, 97, 110, 100, 114, 101, 119, 46, 111, 46, 104, 101, 109, 112, 102, 108, 105, 110, 103, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109].map(x => String.fromCharCode(x));
+
+                    if ($('#contact').val() == '' && $('#email').val() == 'your@email.com') {
+                        window.location = e.join('');
+                    }
+
+                });
+            });
+        </script>
+</body>
+
+</html>
